@@ -7,7 +7,16 @@ class Game extends Phaser.Scene {
 
   preload() {}
 
-  create() {}
+  create() {
+    let hello_text = this.add.text(
+      this.sys.game.config.width / 2,
+      this.sys.game.config.height / 2,
+      "Hello world!",
+      { fontSize: "64px", color: "#ffffff" },
+    );
+
+    hello_text.setOrigin(0.5, 0.5);
+  }
 }
 
 const gameConfig = {
